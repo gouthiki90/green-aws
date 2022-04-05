@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: utf-8
+    session:
+      timeout: 30
+
+spring:
+  mustache:
+    expose-session-attributes: true
+  datasource:
+      url: jdbc:mariadb://database-1.ciuh4iy8zmzd.ap-northeast-2.rds.amazonaws.com:3306/greendb
+      driver-class-name: org.mariadb.jdbc.Driver
+      username: green
+      password: password
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      "[hibernate.format_sql]": true
+
+pic:
+  path: /home/ubuntu/upload/
